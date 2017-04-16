@@ -113,30 +113,6 @@ public class Lab1 {
         return array;
     }
 
-    public static void main(String[] args) {
-        int arr[] = {4, 1, 9, 5, 8, 12, 3, 0, 7};
-        System.out.print("Sorting [");
-        for (int i = 0; i < arr.length; ++i) {
-            if (i+1 == arr.length) {
-                System.out.println(arr[i] + "]");
-            } else {
-                System.out.print(arr[i] + ", ");
-            }
-        }
-
-        System.out.print("Result: [");
-
-        arr = mergeSort(arr);
-
-        for (int i = 0; i < arr.length; ++i) {
-            if (i+1 == arr.length) {
-                System.out.println(arr[i] + "]");
-            } else {
-                System.out.print(arr[i] + ", ");
-            }
-        }
-    }
-
     private static Random random = new Random();
     private static void shuffle(int[] array) {
         for (int i = array.length; i > 1; --i) {
