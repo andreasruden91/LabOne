@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Lab1 {
     /** Sorting algorithms **/
 
@@ -20,10 +18,6 @@ public class Lab1 {
     // Quicksort.
 
     public static void quickSort(int[] array) {
-        // A common strategy (according to the algorithm book) in quicksort is shuffling the array
-        // once to facilitate picking a random pivot each step (to realistically avoid O(n2) complexity for
-        // sorted arrays).
-        shuffle(array);
         quickSort(array, 0, array.length);
     }
 
@@ -111,12 +105,5 @@ public class Lab1 {
         }
 
         return array;
-    }
-
-    private static Random random = new Random();
-    private static void shuffle(int[] array) {
-        for (int i = array.length; i > 1; --i) {
-            swap(array, i-1, random.nextInt(i));
-        }
     }
 }
