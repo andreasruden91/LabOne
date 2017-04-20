@@ -28,6 +28,10 @@ If however trying to fulfill all of that is something we do not wish to bother
 with then merge sort seems like a good all around sorter with less failure
 potential.
 
+Another concern might be stability. If a stable sorting algorithm is needed
+that rules out quicksort which is not stable. In this case we'd likely pick
+mergesort which is stable.
+
 - Are there circumstances when you should definitely avoid a certain algorithm?
 If we select pivot as the first element, and we're dealing with almost sorted
 data, then quick sort should for sure be avoided as it has the potential to
@@ -36,3 +40,6 @@ kill our program if care is not taken.
 When we're dealing with very large data of any setup except essentially sorted
 then we should avoid insertion sort as O(n2) does not let us sort very large
 data sets given real-life time constraints.
+
+If stability is a concern we should not use quicksort which is not a stable
+sorting algorithm. Both mergesort and insertion sort are stable, however.
